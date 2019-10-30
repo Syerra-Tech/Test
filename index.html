@@ -8,5 +8,17 @@
 
 </body>
 
+<script type="text/javascript">
+	var request = new XMLHttpRequest()
 
+	request.open('GET', 'http://petstore.execute-api.us-east-2.amazonaws.com/petstore/pets', true)
+	request.onload = function() {
+ 	 // Begin accessing JSON data here
+  	var data = JSON.parse(this.response)
+  	console.log(data)
+  	
+}
+
+request.send()
+</script>
 </html>
